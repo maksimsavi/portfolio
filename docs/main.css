@@ -1,0 +1,278 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+      background-color: black;
+      animation-name: onload;
+      animation-duration: 0.3s;
+      font-family: 'Open Sans', sans-serif;
+      color: #3f3f44;
+  }
+  .bodycolorlight {
+    background-color: #f7f7f7;
+  }
+  main {
+      margin-top: 50x;
+      margin-left: 10%;
+      margin-right: 10%;
+      display: flex;
+      flex-direction: column;
+  }
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+  }
+  h1 {
+      font-size: 50px;
+      color: #3f3f44;
+  }
+  h2 {
+      font-size: 25px;
+      color: #3f3f44;
+      /*add webkit*/
+      opacity: 70%;
+      margin-top: 20px;
+      margin-top: 10px;
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  .padded-multiline { 
+    line-height: 1.4; 
+    padding: 2px 0; 
+
+  }
+  .padded-multiline span { 
+    background-color: #cceabb;
+    display: inline;
+    padding: 8px;
+    
+    /* Needs prefixing */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  p {
+    
+    line-height: 1.5;
+  }
+  /*this doesn't work in safari. webkit??*/
+@keyframes onload {
+    0%   {opacity: 0%;}
+    10%   {opacity: 0%;}
+    75%  {opacity: 0%;}
+    100% {opacity: 100%;} 
+  }
+  
+  .flexvc {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  section {
+      margin-top: 50px;
+  }
+  
+  #helloimg {
+      width: 300px;
+      height: auto;
+      margin-top: 15%;
+      
+  }
+  #clickimg {
+      width: 200px;
+      height: 70px;  
+      border: 2px solid black;
+      border-radius: 5px;
+      transition: 0.5s;
+
+  }
+  #clickimg:hover {
+    filter: sepia(100%);
+    }
+  #welcomebtn  {
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+  }
+
+
+  /*bio*/
+  section.cards {
+    
+    display: flex;
+    justify-content: flex-start;
+    
+  }
+  section.cards > div {
+    margin-right: 20px;
+    min-width: 300px;
+    
+    min-height: 200px;
+    /*background-color: #FDCB9E; */
+    background-color: #dbdbdb;
+    border-radius: 2px;
+    padding: 20px;
+  }
+  #biodiv {
+    width: 45%;
+  }
+  
+  #projectsdiv {
+    width: 60%;
+    
+  }
+  #projectsdiv img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    object-fit: cover;
+    width: 200px;
+    height: 150px;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.2s;
+  }
+  #projectsdiv img:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    border-radius: 5px;
+  }
+  #projectsdiv > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .projectcard {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .prjct_title {
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  .prjct_tech {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .prjct_descr {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+footer img {
+  width: 30px;
+  height: auto;
+  transition: 0.3s;
+}
+footer img:hover {
+  opacity: 50%;
+  transform: scale(1.1);
+}
+a {
+  color: blue;
+  padding: 5px;
+  transition: 0.2s;
+  }
+.linkhover:hover {
+  
+  color: white;
+  background-color: #FDCB9E;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+  @media screen and (max-width: 1143px) {
+    section.cards {
+      flex-direction: column;
+    }
+    #biodiv {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    #projectsdiv {
+      width: 100%;
+    }
+    #projectsdiv img {
+      object-fit: cover;
+      width: 100%;
+      height: 150px;
+      background-color: black;
+    }
+    div.projectcard {
+      max-width: 50%;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    #projectsdiv > div{
+      flex-direction: column;
+    }
+    div.projectcard {
+      max-width: 100%;
+      padding-bottom: 10px;
+      padding-top: 30px;
+      border-bottom: 2px solid black;
+    }
+    
+  }
