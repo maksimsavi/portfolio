@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-  line-height: 1;
+	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -51,16 +51,19 @@ table {
     box-sizing: border-box;
   }
   body {
-      background-color: white;
+      background-color: black;
       animation-name: onload;
       animation-duration: 0.3s;
       font-family: 'Open Sans', sans-serif;
       color: #3f3f44;
   }
+  .bodycolorlight {
+    background-color: #f7f7f7;
+  }
   main {
       margin-top: 50x;
-      margin-left: 5%;
-      margin-right: 5%;
+      margin-left: 10%;
+      margin-right: 10%;
       display: flex;
       flex-direction: column;
   }
@@ -68,12 +71,12 @@ table {
     font-family: 'Playfair Display', serif;
   }
   h1 {
-      font-size: 40px;
-      color: #355070;
+      font-size: 50px;
+      color: #3f3f44;
   }
   h2 {
       font-size: 25px;
-      color: #ffcdb2;
+      color: #3f3f44;
       /*add webkit*/
       opacity: 70%;
       margin-top: 20px;
@@ -91,7 +94,7 @@ table {
 
   }
   .padded-multiline span { 
-    background-color: #6d6875;
+    background-color: #cceabb;
     display: inline;
     padding: 8px;
     
@@ -100,8 +103,7 @@ table {
     -webkit-box-decoration-break: clone;
   }
   p {
-    padding: 0;
-    margin: 0;
+    
     line-height: 1.5;
   }
   /*this doesn't work in safari. webkit??*/
@@ -118,7 +120,7 @@ table {
       align-items: center;
   }
   section {
-      margin-top: 25px;
+      margin-top: 50px;
   }
   
   #helloimg {
@@ -130,6 +132,7 @@ table {
   #clickimg {
       width: 200px;
       height: 70px;  
+      border: 2px solid black;
       border-radius: 5px;
       transition: 0.5s;
 
@@ -150,25 +153,37 @@ table {
   section.cards {
     
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     
   }
   section.cards > div {
-   padding-top: 20px;
-   padding-bottom: 20px;
+    margin-right: 20px;
+    min-width: 300px;
+    
+    min-height: 200px;
+    /*background-color: #FDCB9E; */
+    background-color: #dbdbdb;
+    border-radius: 2px;
+    padding: 20px;
   }
   #biodiv {
-    
-    width: 100%;
-    margin-bottom: 10px;
+    width: 45%;
   }
   
   #projectsdiv {
-    width: 100%;
-    padding-bottom: 0;
+    width: 60%;
+    
   }
- 
+  #projectsdiv img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    object-fit: cover;
+    width: 200px;
+    height: 150px;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.2s;
+  }
   #projectsdiv img:hover {
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
@@ -176,110 +191,70 @@ table {
     border-radius: 5px;
   }
   #projectsdiv > div {
-    width: 100%;
-    
+    display: flex;
+    justify-content: space-between;
   }
   
   .projectcard {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: #ffcdb2; 
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    padding: 10px;
   }
-  #projectsdiv img {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    object-fit: cover;
-    align-self: center;
-    height: 150px;
-    background-color: black;
-    border-radius: 2px;
-    opacity: 70%;
-    transition: 0.2s;
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: 6px solid #b5838d;
-  }
-  p.prjct_title {
+  .prjct_title {
     font-weight: bolder;
-    font-size: 25px;
-    color: #6d6875;
-    
+    font-size: 20px;
   }
   .prjct_tech {
-    font-size: 10px;
-
+    font-size: 12px;
+    margin-bottom: 10px;
   }
   .prjct_descr {
     margin-bottom: 10px;
-    color: #6d6875;
+    font-weight: bold;
   }
   footer {
-    
+    margin-top: 20px;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
   }
 footer img {
-  width: 40px;
+  width: 30px;
   height: auto;
   transition: 0.3s;
-  margin: 10px;
 }
 footer img:hover {
   opacity: 50%;
   transform: scale(1.1);
 }
 a {
-  color: #b5838d;
-  
+  color: blue;
+  padding: 5px;
   transition: 0.2s;
   }
 .linkhover:hover {
   
   color: white;
+  background-color: #FDCB9E;
+  font-weight: bolder;
   border-radius: 5px;
 }
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 50px;
-}
-h2 {
-  font-size: 20px;
-}
-  #projectsdiv > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .projectcard {
-    width: 48%;
-  }
-  main {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  
-}
-/*  
-@media screen and (max-width: 1143px) {
+
+  @media screen and (max-width: 1143px) {
     section.cards {
-      flex-direction: row;
-    } 
+      flex-direction: column;
+    }
     #biodiv {
-      width: 45%;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
     #projectsdiv {
-      display: flex;
-    justify-content: space-between;
+      width: 100%;
     }
     #projectsdiv img {
-      width: 200px;
+      object-fit: cover;
+      width: 100%;
+      height: 150px;
+      background-color: black;
     }
     div.projectcard {
       max-width: 50%;
@@ -301,4 +276,3 @@ h2 {
     }
     
   }
-*/
